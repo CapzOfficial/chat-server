@@ -1,7 +1,7 @@
 {
   "name": "sellauth-realtime-chat",
   "version": "1.0.0",
-  "description": "Real-time chat server for SellAuth integration",
+  "description": "Real-time chat server for SellAuth integration with Render deployment",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
