@@ -9,11 +9,7 @@ const app = express();
 const server = createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: [
-            "https://yoursite.sellauth.com", // REPLACE WITH YOUR ACTUAL SELLAUTH URL
-            "http://localhost:3000",
-            "https://localhost:3000"
-        ],
+        origin: "*", // Allow all origins for easier setup
         methods: ["GET", "POST"],
         credentials: true
     }
@@ -31,11 +27,7 @@ let connectedUsers = new Set();
 
 // Middleware
 app.use(cors({
-    origin: [
-        "https://yoursite.sellauth.com", // REPLACE WITH YOUR ACTUAL SELLAUTH URL
-        "http://localhost:3000",
-        "https://localhost:3000"
-    ],
+    origin: "*", // Allow all origins for easier setup
     credentials: true
 }));
 app.use(express.json());
